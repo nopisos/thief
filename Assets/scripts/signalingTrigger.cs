@@ -4,15 +4,16 @@ using UnityEngine;
 using UnityEngine.Events;
 
 
-public class signalingTrigger : MonoBehaviour
+public class SignalingTrigger : MonoBehaviour
 {
     [SerializeField] private AudioSource _sound;
+    [SerializeField] private float _step;
+    [SerializeField] private float _minVolume;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         VolumeUp();
         StartVolumeUp();
-
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -42,11 +43,10 @@ public class signalingTrigger : MonoBehaviour
         _sound.volume = 0;
         _sound.Play();
 
-        float step = 0.1f;
         float i = 0;
         while (i <= _volume)
         {
-            i += Time.deltaTime * step;
+            i += Time.deltaTime * _step;
             _sound.volume = i;
             yield return null;
         }
@@ -54,11 +54,10 @@ public class signalingTrigger : MonoBehaviour
 
     private IEnumerator VolumeReduce()
     {
-        float step = 0.1f;
         float i = _sound.volume;
-        while (i >= 0.05f)
+        while (i >= _minVolume)
         {
-            i -= Time.deltaTime * step;
+            i -= Time.deltaTime * _step;
             _sound.volume = i;
             yield return null;
         }

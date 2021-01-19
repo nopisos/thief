@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class move : MonoBehaviour
+public class Move : MonoBehaviour
 {
+    [SerializeField] private float _speed;
 
     private void Update()
     {
-        transform.Translate(2 * Time.deltaTime, 0, 0);
+        transform.Translate(_speed * Time.deltaTime, 0, 0);
     }
 }
 

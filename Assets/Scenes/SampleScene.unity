@@ -745,7 +745,7 @@ GameObject:
   - component: {fileID: 478632201}
   - component: {fileID: 478632200}
   m_Layer: 0
-  m_Name: ' signaling'
+  m_Name: ' Signaling'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -900,6 +900,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sound: {fileID: 478632200}
+  _step: 0.1
+  _minVolume: 0.05
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,7 +997,7 @@ GameObject:
   - component: {fileID: 528945121}
   - component: {fileID: 528945120}
   m_Layer: 0
-  m_Name: ground
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1073,11 +1075,11 @@ GameObject:
   - component: {fileID: 694669244}
   - component: {fileID: 694669243}
   - component: {fileID: 694669242}
-  - component: {fileID: 694669241}
   - component: {fileID: 694669246}
   - component: {fileID: 694669245}
+  - component: {fileID: 694669241}
   m_Layer: 0
-  m_Name: rogue spritesheet calciumtrice (1)_69
+  m_Name: Thief
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1095,6 +1097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d25ac13ad2728a48bd85df60ee1f0c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speed: 2
 --- !u!95 &694669242
 Animator:
   serializedVersion: 3
